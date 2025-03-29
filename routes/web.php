@@ -35,3 +35,7 @@ Route::prefix('admin')->group(function(){
     Route::resource('/testimonial', TestimonialController::class);
     Route::resource('/product', ProductController::class);
 });
+
+Route::prefix('user')->group(function(){
+    Route::get('/login',[LoginController::class,'userLoginPage'])->name('user.loginpage');
+});
